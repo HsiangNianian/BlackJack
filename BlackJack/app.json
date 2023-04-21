@@ -1,0 +1,18 @@
+{
+    "name" : "简单的21点娱乐插件",
+    "author" : "简律纯",
+    "namespace" : "BlackJack",
+    "info" : "BlackJack\n\n尝鲜:.BlackJack rule",
+    "priority" : 30000,
+    "svn" : 1,
+    "version" : "0420",
+    "compatible_svn" : 100,
+    "message_mode" : "olivos_string",
+    "support" : [
+        {
+            "sdk" : "all",
+            "platform" : "all",
+            "model" : "all"
+        }
+    ]
+}
