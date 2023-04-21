@@ -10,7 +10,9 @@
 
 如果您希望继续使用此插件，可以加入我们的群聊 (群ID: [`971050440`](https://jq.qq.com/?_wv=1027&k=VJqxAFTg)) 并提供更详细的信息。我们将尽力在空闲时间内修复它。
 
-## BlackJack <img align="right" width="200" src="image/README/1682061505967.png">
+## BlackJack <img align="right" width="300" src="image/README/1682061505967.png">
+* *插件基于 [OlivOS](https://github.com/OlivOS-Team/OlivOS)*
+* *插件基于 [OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)*
 
 > 基于 OlivOS 和 OlivaDiceCore 的简单交互式 21 点游戏
 
