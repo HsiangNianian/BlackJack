@@ -46,7 +46,7 @@ jobs:
         with:
           tag_name: v${{steps.version.outputs.value}}
           release_name: v${{steps.version.outputs.value}}
-          body: {{steps.Changelog.outputs.content}}
+          body: ${{steps.Changelog.outputs.content}}
           draft: true
           prerelease: false
       - name: 上传opk文件
