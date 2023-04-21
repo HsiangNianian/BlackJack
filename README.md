@@ -12,7 +12,7 @@ To continue using the `BlackJack` plugin directly on `OlivOS`, we recommend upgr
 
 If you wish to continue using this plugin, you can join our group chat (Group ID: [`971050440`](https://jq.qq.com/?_wv=1027&k=VJqxAFTg)) and provide more detailed information. We will make efforts to fix it in our free time.
 
-## BlackJack <img align="right" width="400" src="image/README/1682061505967.png">
+## BlackJack <img align="right" width="200" src="image/README/1682061505967.png">
 
 > A simple interactive 21-point game based on OlivOS and OlivaDiceCore
 
@@ -61,7 +61,7 @@ The aim of the game is to get your hand as close as possible to the value of 21 
 
 7. Command Parameters
 
-`.BlackJack -n|--name [Player Name, Default: Hopeless Gambler] -b|--bet [Initial Bet, Default: 1000]` //These can be omitted.
+`.BlackJack -n|--name [Player Name, Default: 无可救药的赌徒] -b|--bet [Initial Bet, Default: 1000]` //These can be omitted.
 
 Enjoy the game!
 
@@ -74,7 +74,7 @@ Alternatively, you can also [`fork`](https://github.com/HsiangNianian/BlackJack/
 ### 👨‍🚀 Contributors
 
 <a href="https://github.com/HsiangNianian/BlackJack/graphs/contributors">
-  <img width="150" src="https://contrib.rocks/image?repo=HsiangNianian/BlackJack" />
+  <img width="50" src="https://contrib.rocks/image?repo=HsiangNianian/BlackJack" />
 </a>
 
 ### 📄 License
