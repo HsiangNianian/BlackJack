@@ -5,7 +5,7 @@
     "info" : "BlackJack\n\n尝鲜:.BlackJack rule",
     "priority" : 30000,
     "svn" : 1,
-    "version" : "0420",
+    "version" : "0.1.0",
     "compatible_svn" : 100,
     "message_mode" : "olivos_string",
     "support" : [
