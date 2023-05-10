@@ -84,4 +84,4 @@
 
 ### 📄 License
 
-[GPL 3.0](https://github.com/HsiangNianian/BlackJack/blob/main/LICENSE) © 2023-PRESENT [Jian Luchun](https://github.com/HsiangNianian)
+[GPL 3.0](https://github.com/HsiangNianian/BlackJack/blob/main/LICENSE) © 2023-PRESENT [简律纯](https://github.com/HsiangNianian)
