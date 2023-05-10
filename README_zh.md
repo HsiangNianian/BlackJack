@@ -18,8 +18,11 @@
 
 ![](https://img.shields.io/github/last-commit/HsiangNianian/BlackJack) [![CI](https://github.com/HsiangNianian/BlackJack/actions/workflows/ci.yml/badge.svg)](https://github.com/HsiangNianian/BlackJack/actions/workflows/ci.yml) [![](https://img.shields.io/github/downloads/HsiangNianian/BlackJack/total)](https://github.com/HsiangNianian/BlackJack/tags) [![](https://img.shields.io/github/v/release/HsiangNianian/BlackJack)](https://github.com/HsiangNianian/BlackJack/releases)
 
-### 📕21 点游戏规则书
-
+<details open>
+<Summary>
+  <h3>📕21 点游戏规则书</h3>
+  </Summary>
+  
 1. 游戏目标
 
 在不爆牌（手中的牌面点数超过21）的情况下，使自己手中的牌点数尽量接近21点，或者比庄家的牌点数更高。
@@ -65,6 +68,8 @@
 
 愉快游戏！
 
+  </details>
+  
 ### ⬇ 下载
 
 您可以在右侧的 [`release`](https://github.com/HsiangNianian/BlackJack/releases/latest) 部分找到打包和未压缩的 `opk` 插件文件供下载。
