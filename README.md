@@ -20,7 +20,10 @@ If you wish to continue using this plugin, you can join our group chat (Group ID
 
 ![](https://img.shields.io/github/last-commit/HsiangNianian/BlackJack) [![CI](https://github.com/HsiangNianian/BlackJack/actions/workflows/ci.yml/badge.svg)](https://github.com/HsiangNianian/BlackJack/actions/workflows/ci.yml) [![](https://img.shields.io/github/downloads/HsiangNianian/BlackJack/total)](https://github.com/HsiangNianian/BlackJack/tags) [![](https://img.shields.io/github/v/release/HsiangNianian/BlackJack)](https://github.com/HsiangNianian/BlackJack/releases)
 
-### 📕 21-point Gaming Rule Book
+<details close>
+<Summary>
+  <h3>📕 21-point Gaming Rule Book</h3>
+  </Summary>
 
 1. Game Objective
 
@@ -66,6 +69,7 @@ The aim of the game is to get your hand as close as possible to the value of 21 
 `.BlackJack -n|--name [Player Name, Default: 无可救药的赌徒] -b|--bet [Initial Bet, Default: 1000]` //These can be omitted.
 
 Enjoy the game!
+</details>
 
 ### ⬇ Download
 
