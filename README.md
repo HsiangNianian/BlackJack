@@ -12,7 +12,7 @@ To continue using the `BlackJack` plugin directly on `OlivOS`, we recommend upgr
 
 If you wish to continue using this plugin, you can join our group chat (Group ID: [`971050440`](https://jq.qq.com/?_wv=1027&k=VJqxAFTg)) and provide more detailed information. We will make efforts to fix it in our free time.
 
-## BlackJack <img align="right" width="300" src="image/README/1682061505967.png">
+## BlackJack <img align="right" width="300" src="https://ghproxy.com/github.com/HsiangNianian/BlackJack/blob/main/image/README/1682061505967.png">
 * *Plugin based on [OlivOS](https://github.com/OlivOS-Team/OlivOS)*
 * *Plugin based on [OlivaDiceCore](https://github.com/OlivOS-Team/OlivaDiceCore)*
 
