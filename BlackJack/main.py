@@ -87,21 +87,21 @@ rule = """\
 愉快游戏！"""
 
 class Event(object):
-    def init(plugin_event, Proc):  # type: ignore
+    def init(self, Proc):  # type: ignore
         global global_Proc
         global_Proc = Proc
 
-    def group_message(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow) -> None:  # type: ignore
+    def group_message(self, Proc: OlivOS.pluginAPI.shallow) -> None:    # type: ignore
         """
         Receive group messages
         """
-        play_game(plugin_event, Proc)
+        play_game(self, Proc)
 
-    def private_message(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow) -> None:  # type: ignore
+    def private_message(self, Proc: OlivOS.pluginAPI.shallow) -> None:    # type: ignore
         """
         Receive private messages
         """
-        play_game(plugin_event, Proc)
+        play_game(self, Proc)
 
 
 def play_game(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow):
@@ -135,6 +135,8 @@ def play_game(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow):
                 return
             return self.cards.pop()
 
+
+
     class Hand:
         def __init__(self):
             self.cards = []
@@ -145,18 +147,21 @@ def play_game(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow):
         def get_value(self):
             for card in self.cards:
                 if card[0] not in card_values:
-                    if 'qq' == plugin_event.platform['platform']:
+                    if plugin_event.platform['platform'] == 'qq':
                         try:
                             msg_id = plugin_event.data.message_id # type: ignore
                         except:
                             pass
                     eventReply(plugin_event, f'未知卡牌: {card}')
-            value = sum([card_values[card[0]] for card in self.cards])
+            value = sum(card_values[card[0]] for card in self.cards)
             num_aces = len([card for card in self.cards if card[0] == 'A'])
             while value > 21 and num_aces > 0:
                 value -= 10
                 num_aces -= 1
             return value
+
+
+
 
     class Player:
         def __init__(self, name, chips):
@@ -178,9 +183,7 @@ def play_game(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow):
                 flag_need_loop = False
                 if plugin_event != None:
                     flag_need_loop = True
-                    if input is None:
-                        eventReply(plugin_event, '无效的输入。请您输入一个数字。')
-                    elif not isinstance(input, str):
+                    if input is None or not isinstance(input, str):
                         eventReply(plugin_event, '无效的输入。请您输入一个数字。')
                     else:
                         try:
@@ -222,15 +225,16 @@ def play_game(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow):
                         eventReply(
                             plugin_event, '无效的输入。请您输入"hit"或者"stand"。')
 
+
+
+
     class Dealer:
         def __init__(self):
             self.hand = Hand()
 
         def hit_or_stand(self):
-            if self.hand.get_value() < 17:
-                return 'hit'
-            else:
-                return 'stand'
+            return 'hit' if self.hand.get_value() < 17 else 'stand'
+
 
     message = plugin_event.data.message # type: ignore
     if message.split()[0].lower().startswith(".blackjack") or message.split()[0].lower().startswith("。blackjack"):
@@ -250,7 +254,7 @@ def play_game(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow):
 
             # 发牌
             deck.shuffle()
-            for i in range(2):
+            for _ in range(2):
                 player.hand.add_card(deck.draw_card())
                 dealer.hand.add_card(deck.draw_card())
 
@@ -323,14 +327,14 @@ def play_game(plugin_event: OlivOS.API.Event, Proc: OlivOS.pluginAPI.shallow):
 
 
 def eventReply(plugin_event: OlivOS.API.Event, message: str, msgid: 'str|None' = None):
-    if 'qq' == plugin_event.platform['platform']:
+    if plugin_event.platform['platform'] == 'qq':
         try:
             msgid = plugin_event.data.message_id # type: ignore
         except:
             pass
     res = message
-    if msg_id != None:
-        res = '[OP:reply,id=%s]%s' % (str(msg_id), message)
+    if msg_id is None:
+        res = f'[OP:reply,id={str(msgid)}]{message}'
     else:
-        res = '[OP:reply,id=%s]%s' % (str(msgid), message)
+        res = f'[OP:reply,id={str(msg_id)}]{message}'
     plugin_event.reply(res)
